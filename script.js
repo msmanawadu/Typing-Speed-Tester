@@ -29,6 +29,20 @@ function runTimer(){
 // Match the text entered with the provided text on the page:
 function spellCheck(){
     let textEntered = testArea.value;
+    // Get a copy of each entered word at a time
+    let originTextMatch = originText.substring(0, textEntered.length); 
+
+    if(textEntered == originText){
+        // if entire string matches
+        testWrapper.style.borderColor = "#429890"; // Green
+    } else {
+        if(textEntered == originTextMatch){
+            //if a word matches at a time
+            testWrapper.style.borderColor = "#65CCf3"; // Blue
+        } else {
+            testWrapper.style.borderColor = "#E95D0F" // Orange
+        }
+    }
 }
 
 // Start the timer:
