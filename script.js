@@ -55,12 +55,19 @@ function start(){
         timerRunning = true;
         interval = setInterval(runTimer, 10);
     }
-
 }
 
 // Reset everything:
 function reset(){
-    console.log("Timer was resetted !")
+    clearInterval(interval);
+    interval = null;
+    
+    timer = [0,0,0,0]; // Reset clock
+    timerRunning = false;
+
+    testArea.value = ""; // visual reset of clock and text-area
+    theTimer.innerHTML = "00:00:00";
+    testArea.style.borderColor = "grey";
 }
 
 // Event listeners for keyboard input and the reset button:
