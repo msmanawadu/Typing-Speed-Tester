@@ -59,13 +59,12 @@ function start(){
 
 // Reset everything:
 function reset(){
-    clearInterval(interval);
+    clearInterval(interval); // Reset timer
     interval = null;
-    
-    timer = [0,0,0,0]; // Reset clock
+    timer = [0,0,0,0]; 
     timerRunning = false;
 
-    testArea.value = ""; // visual reset of clock and text-area
+    testArea.value = ""; // Visual reset of timer and text-area
     theTimer.innerHTML = "00:00:00";
     testArea.style.borderColor = "grey";
 }
